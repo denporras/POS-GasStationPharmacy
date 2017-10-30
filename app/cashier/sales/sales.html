@@ -1,0 +1,240 @@
+<div class="page-wizard">
+    <div class="header">
+        <h2>New
+            <strong>Sale</strong>
+        </h2>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="m-t-10 m-b-20 f-16">You can insert a new sale here easly. Please register all client and product data</p>
+
+            <div class="wizard-div current wizard-left">
+                <form class="wizard" data-style="sky" data-nav="left" role="form">
+                    <fieldset>
+                        <legend>Client Information</legend>
+
+
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <label>Default client</label>
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1" ng-model="defaultClient">
+                                    <label class="onoffswitch-label" for="myonoffswitch1">
+                                        <span class="onoffswitch-inner">
+                                            <span class="onoffswitch-active">
+                                                <span class="onoffswitch-switch">YES</span>
+                                            </span>
+                                            <span class="onoffswitch-inactive">
+                                                <span class="onoffswitch-switch">NO</span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row" ng-show="!defaultClient">
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label for="id">Client ID</label>
+                                    
+                                        <input type="text" class="form-control" ng-model="userId" id="id" ui-mask="999999999" ui-mask-placeholder ui-mask-placeholder-char="_">
+                                        <i ng-if="clientExist && idReady" class="fa fa-check"></i>
+                                        <i ng-if="!clientExist && idReady" class="fa fa-close"></i>
+                                    
+                                    <span ng-show="!idReady" class="help-block">ID is required </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+
+                            </div>
+                        </div>
+
+                        <div ng-show="!clientExist">
+                            <div class="row">
+                                <div class="col-lg-5">
+
+                                    <div class="form-group">
+                                        <label for="firstname">First Name</label>
+                                        <input type="text" class="form-control" ng-model="user.first_name" id="firstname">
+                                        <span ng-show="user.first_name.length == 0" class="help-block">First name is required </span>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstlastname">First Lastname</label>
+                                        <input type="text" class="form-control" ng-model="user.first_last_name" id="firstlastname">
+                                        <span ng-show="user.first_last_name.length == 0" class="help-block">First lastname is required </span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="residence">Residence</label>
+                                        <input type="text" class="form-control" ng-model="user.residence" id="residence">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="birthdate">Birth Date</label>
+                                        <input type="date" class="form-control" ng-model="user.birthdate" required="required" id="birthdate">
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-5">
+
+                                    <div class="form-group">
+                                        <label for="secondname">Second Name</label>
+                                        <input type="text" class="form-control" ng-model="user.second_name" id="secondname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="secondlastname">Second Lastname</label>
+                                        <input type="text" class="form-control" ng-model="user.second_last_name" id="secondlastname">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" class="form-control" ng-model="user.phone" id="phone" ui-mask="99-99-99-99" ui-mask-placeholder ui-mask-placeholder-char="_">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Products</legend>
+                        In publishing and graphic design, lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document
+                        or visual presentation, such as web pages, typography, and graphical layout. It is a form of "greeking".
+                        Even though using "lorem ipsum" often arouses curiosity due to its resemblance to classical Latin,
+                        it is not intended to have meaning. Where text is visible in a document, people tend to focus on
+                        the textual content rather than upon overall presentation, so publishers use lorem ipsum when displaying
+                        a typeface or design in order to direct the focus to presentation. "Lorem ipsum" also approximates
+                        a typical distribution of letters in English.
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option1" checked data-radio="iradio_square-blue"> Yes, it is totaly right.
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2" data-radio="iradio_square-blue"> No, I check it twice and it is not right.
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Finish Sale</legend>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p>
+                                    Even though using "lorem ipsum" often arouses curiosity due to its resemblance to classical Latin, it is not intended to
+                                    have meaning. Where text is visible in a document, people tend to focus on the textual
+                                    content rather than upon overall presentation, so publishers use lorem ipsum when displaying
+                                    a typeface or design in order to direct the focus to presentation. "Lorem ipsum" also
+                                    approximates a typical distribution of letters in English.
+                                </p>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="name7">Your name</label>
+                                            <input type="text" id="name7" class="form-control" placeholder="Your name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="cat7">Name of your cat</label>
+                                            <input type="text" id="cat7" class="form-control" placeholder="Name of your cat">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="hamster7"></label>
+                                            <input type="text" id="hamster7" class="form-control" placeholder="Name of your hamster">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="grocery7"></label>
+                                            <input type="text" id="grocery7" class="form-control" placeholder="Name of your grocery seller">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" value="option1" data-radio="iradio_square-blue" checked> Option one is this and that&mdash;be sure to include why it's great
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" data-radio="iradio_square-blue" value="option2"> Option two can be something else and selecting it will deselect option one
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="superPower" data-checkbox="icheckbox_square-blue"> I want have super-power
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="moreSuperPower" data-checkbox="icheckbox_square-blue"> I have one or more super-power already
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <p>
+                                    Even though using "lorem ipsum" often arouses curiosity due to its resemblance to classical Latin, it is not intended to
+                                    have meaning. Where text is visible in a document, people tend to focus on the textual
+                                    content rather than upon overall presentation, so publishers use lorem ipsum when displaying
+                                    a typeface or design in order to direct the focus to presentation. "Lorem ipsum" also
+                                    approximates a typical distribution of letters in English.
+                                </p>
+                                <p>
+                                    Using "lorem ipsum" often arouses curiosity due to its resemblance to classical Latin, it is not intended to have meaning.
+                                    Where text is visible in a document, people tend to focus on the textual content rather
+                                    than upon overall presentation, so publishers use lorem ipsum when displaying a typeface
+                                    or design in order to direct the focus to presentation. "Lorem ipsum" also approximates
+                                    a typical distribution of letters in English.
+                                </p>
+                            </div>
+                            <noscript>
+                                <input class="nocsript-finish-btn sf-right nocsript-sf-btn" type="submit" name="no-js-clicked" value="finish" />
+                            </noscript>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p class="pull-left sm-pull-reset">
+                <span>Copyright
+                    <span class="copyright">&copy;</span> 2015 </span>
+                <span>THEMES LAB</span>.
+                <span>All rights reserved. </span>
+            </p>
+            <p class="pull-right sm-pull-reset">
+                <span>
+                    <a href="#" class="m-r-10">Support</a> |
+                    <a href="#" class="m-l-10 m-r-10">Terms of use</a> |
+                    <a href="#" class="m-l-10">Privacy Policy</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
